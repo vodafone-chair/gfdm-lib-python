@@ -24,7 +24,6 @@ class MappingBase(object):
         except AttributeError:
             self._empty_symbol_value = 0
 
-
     def _hasIgnoredLocations(self):
         return hasattr(self._pnew, 'ignored_data_locations') and len(self._pnew.ignored_data_locations) > 0
 
