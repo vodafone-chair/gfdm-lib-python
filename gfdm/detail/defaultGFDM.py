@@ -1,8 +1,9 @@
-class GFDMParams(object):
 # Copyright (c) 2016 TU Dresden
 # All rights reserved.
 # See accompanying license.txt for details.
-#
+
+
+class GFDMParams(object):
     pass
 
 

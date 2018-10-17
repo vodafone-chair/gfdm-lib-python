@@ -1,10 +1,11 @@
-import numpy as np
 # Copyright (c) 2016 TU Dresden
 # All rights reserved.
 # See accompanying license.txt for details.
 #
+import numpy as np
 from numpy.fft import fft, ifft, fftshift
 from gfdmutil import get_transmitter_pulse
+
 
 class Modulator(object):
     def modulate(self, block):
@@ -59,6 +60,7 @@ class DefaultModulator(Modulator):
             b = np.tile(B[:,m], M)
             signal[:, m] = b * np.roll(g, m*K)
         return signal.sum(axis=1)
+
 
 def do_modulate(p, D):
     return DefaultModulator(p).modulate(D)

@@ -136,6 +136,7 @@ def get_receiver_pulse(pnew, kind, snr=None):
     else:
         raise NotImplementedError("Unknown receiver type!")
 
+
 def get_dirichlet_pulse(K, M):
     g = filters.filterObject('dirichlet', 0, None).getPulse(K, M)
     g = fftshift(g)
